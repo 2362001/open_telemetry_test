@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: spring-demo-app
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+otel:
+  resource:
+    attributes: service.name=spring-demo-app
